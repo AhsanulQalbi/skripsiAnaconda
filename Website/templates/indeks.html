@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+ <!-- Masthead -->
+ <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="width: 100%; background-image: url({{url_for('static', filename='images/blue.jpg')}})">
+    <div class="container">
+      <div class="row align-items-center site-hero-inner justify-content-center">
+        <div class="col-md-8 text-center">
+          <div class="mb-5 element-animate">
+            <h1>Sentiment Prediction</h1>
+            <p>Input your sentiment</p>
+          </div>
+          <form class="form-inline element-animate" id="search-form" action = "#" method = "POST">
+            <label for="s" class="sr-only">Location</label>
+            <input type="text" name = "sentiment" class="form-control form-control-block search-input" id="autocomplete" placeholder="Input Text to Predict" onFocus="geolocate()">
+            <button type="submit" class="btn btn-primary">Predict</button>
+          </form>
+          {% if konten %}
+          <div class="mb-5 element-animate">
+            <h2 style = "color:white">Result</h2>
+            <p>{{konten}}</p>
+            <h2 style = "color:white">{{prediksi}}</h2>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="width: 100%; height: 10%; background-image: url({{url_for('static', filename='images/blue.jpg')}})">
+    <center>
+      <div class="row justify-content-center"></div>
+          <div class="col-md-7 text-center" style="color: white;">
+              Template by Colorlib and DataTables
+          </div>
+          </div>
+      </center>
+  </section>
+  
+{% endblock %}

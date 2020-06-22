@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.imgParagraph {
+    float: right;
+    border: 1px dotted black;
+    margin: 0px 0px 15px 20px;
+  }
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+</style>
+ <!-- Masthead -->
+ <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="width: 100%; background-image: url({{url_for('static', filename='images/blue.jpg')}})">
+    <div class="container">
+        <div class="row align-items-center site-hero-inner justify-content-center">
+            <p style="font-size: 30px;">
+                This site was created to complate my final project using Python, Flask, TF-IDF method, and Random Forest Classifier by scikit-learn. <br><br>AhsanulQalbi - 00000015655 
+            <br>
+            <br>
+            View My Profile :
+            <br>
+            <a style = "color: white;"href="https://www.linkedin.com/in/ahsanul-qalbi/">Ahsanul Qalbi Fajar Islami</a> <a href="https://www.linkedin.com/in/ahsanul-qalbi/" class="fa fa-linkedin"></a> 
+        </p>
+        </div>
+    </div>
+  </section>
+  
+{% endblock %}
